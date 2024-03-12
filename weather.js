@@ -13,7 +13,7 @@ navigator.geolocation.getCurrentPosition(function getLocation (position) {
             img.src = `http://openweathermap.org/img/w/${body.weather[0].icon}.png`;
             let tempInCelsius = Math.floor(body.main.temp - 273.15);
             degrees.textContent = `${tempInCelsius}°C`;
-            weather.textContent = body.weather[0].main + ", (" + body.weather[0].description + ")";
+            weather.textContent = body.weather[0].main + ", " + body.weather[0].description + "";
             city.textContent = body.name + ", " + body.sys.country;
         })
         .catch(e => console.error(e));
